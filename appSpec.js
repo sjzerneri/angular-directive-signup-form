@@ -9,13 +9,13 @@ describe('optIn', function () {
 
     beforeEach(module("myApp"));
     beforeEach(module("opt-in-template.html"));
-    beforeEach(inject(function (_$rootscope_, _$compile_) {
+    beforeEach(inject(function (_$rootScope_, _$compile_) {
         $compile = _$compile_;
-        $rootScope = _$rootscope_;
+        $rootScope = _$rootScope_;
     }));
     it('should have a submit button that says Give us yr infoz!', function () {
         var element = $compile("<opt-in></opt-in>")($rootScope);
-        $rootScope.digest();
+        $rootScope.$digest();
         expect(element.html()).toContain("Give us yr infoz!");
     })
 });
