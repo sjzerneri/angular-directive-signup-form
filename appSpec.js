@@ -6,8 +6,9 @@ describe('optIn', function () {
 
     var $compile,
         $rootScope;
+
     beforeEach(module("myApp"));
-    beforeEach(module('opt-in-template.html'));
+    beforeEach(module("opt-in-template.html"));
     beforeEach(inject(function (_$rootscope_, _$compile_) {
         $compile = _$compile_;
         $rootScope = _$rootscope_;
